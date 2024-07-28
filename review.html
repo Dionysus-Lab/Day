@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review - DayLight KPOP Merch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">DayLight</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></div>
+        </nav>
+    </header>
+
+    <!-- Leave a Review Page Content -->
+    <main>
+        <h1>Leave a Review</h1>
+        <form id="review-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="product">Product:</label>
+            <select id="product" name="product" required>
+                <option value="BOYNEXTDOOR - WHO Album">BOYNEXTDOOR - WHO Album</option>
+                <option value="BLACKPINK - BORN PINK Album">BLACKPINK - BORN PINK Album</option>
+                <option value="BLACKPINK - Lightstick Version 2">BLACKPINK - Lightstick Version 2</option>
+                <option value="BTS - BE Album">BTS - BE Album</option>
+                <option value="BTS - Jungkook Golden Album">BTS - Jungkook Golden Album</option>
+                <option value="BTS - Mood Lamp">BTS - Mood Lamp</option>
+                <option value="ENHYPEN - Dark Blood Album">ENHYPEN - Dark Blood Album</option>
+                <option value="ENHYPEN - Official Lightstick">ENHYPEN - Official Lightstick</option>
+                <!-- Add more products as needed -->
+            </select>
+            
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Terrible</option>
+            </select>
+            
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 DayLight</p>
+        <ul>
+            <li><a href="review.html">Leave a Review</a></li>
+            <li><a href="terms.html">Terms and Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the default way
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const product = document.getElementById('product').value;
+            const rating = document.getElementById('rating').value;
+            const review = document.getElementById('review').value;
+
+            // Create URL parameters
+            const params = new URLSearchParams();
+            params.append('name', name);
+            params.append('email', email);
+            params.append('product', product);
+            params.append('rating', rating);
+            params.append('review', review);
+
+            // Redirect to review-submitted.html with URL parameters
+            window.location.href = 'review-submitted.html?' + params.toString();
+        });
+    </script>
+</body>
+</html>

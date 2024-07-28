@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted - DayLight KPOP Merch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DayLight</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></div>
+        </nav>
+    </header>
+    <main>
+        <h1>Review Submitted Successfully</h1>
+        <div id="submitted-review">
+            <h2>Thank you for your review!</h2>
+            <p><strong>Name:</strong> <span id="submitted-name"></span></p>
+            <p><strong>Email:</strong> <span id="submitted-email"></span></p>
+            <p><strong>Product:</strong> <span id="submitted-product"></span></p>
+            <p><strong>Rating:</strong> <span id="submitted-rating"></span></p>
+            <p><strong>Review:</strong> <span id="submitted-review-text"></span></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 DayLight</p>
+        <ul>
+            <li><a href="review.html">Leave a Review</a></li>
+            <li><a href="terms.html">Terms and Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById('submitted-name').textContent = params.get('name');
+            document.getElementById('submitted-email').textContent = params.get('email');
+            document.getElementById('submitted-product').textContent = params.get('product');
+            document.getElementById('submitted-rating').textContent = params.get('rating');
+            document.getElementById('submitted-review-text').textContent = params.get('review');
+        });
+    </script>
+</body>
+</html>

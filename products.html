@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayLight KPOP Merch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">DayLight</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></div>
+        </nav>
+    </header>
+
+    <!-- Products Page Content -->
+    <main>
+        <h1>Our Products</h1>
+        <div class="products">
+            <div class="product">
+                <a href="bndalbum.html"><img src="images/bndalbum.jpg" alt="BOYNEXTDOOR-WHO Album"></a>
+                <h2>BOYNEXTDOOR - WHO Album</h2>
+                <p>Price: $20.00</p>
+                <label for="quantity-bndalbum">Quantity:</label>
+                <input type="number" id="quantity-bndalbum" name="BOYNEXTDOOR-WHO Album" min="1" value="1" max="5">
+                <button onclick="addToCart('BOYNEXTDOOR-WHO Album', 20, 'images/bndalbum.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="BPbornpinkalbum.html"><img src="images/BPbornpinkalbum.jpg" alt="BLACKPINK-BORN PINK Album"></a>
+                <h2>BLACKPINK - BORN PINK Album</h2>
+                <p>Price: $25.00</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity-BPbornpinkalbum" name="BLACKPINK-BORN PINK Album" min="1" value="1" max="5">
+                <button onclick="addToCart('BLACKPINK-BORN PINK Album', 25, 'images/BPbornpinkalbum.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="BPlightstickv2.html"><img src="images/BPlightstickv2.jpg" alt="BLACKPINK-Offical Lightstick"></a>
+                <h2>BLACKPINK - Official Lightstick Version 2</h2>
+                <p>Price: $70.00</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity-BPlightstickv2" name="BLACKPINK-Offical Lightstick" min="1" max="5" value="1">
+                <button onclick="addToCart('BLACKPINK-Official Lightstick', 70, 'images/BPlightstickv2.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="BTSBEalbum.html"><img src="images/BTSBEalbum.jpg" alt="BTS - BE Album"></a>
+                <h2>BTS - Deluxe EDITION BE Album</h2>
+                <p>Price: $65.00</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity-BTSBEalbum" name="BTS - BE Album" min="1" value="1" max="5">
+                <button onclick="addToCart('BTS - BE Album', 65, 'images/BTSBEalbum.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="BTSGoldenalbum.html"><img src="images/BTSGoldenalbum.jpg" alt="BTS - Golden Album"></a>
+                <h2>BTS - JUNGKOOK Golden Album</h2>
+                <p>Price: $25.00</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity-BTSGoldenalbum" name="BTS - Golden Album" min="1" value="1" max="5">
+                <button onclick="addToCart('BTS - Golden Album', 25, 'images/BTSGoldenalbum.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="BTSlamp.html"><img src="images/BTSlamp.jpg" alt="BTS-Mikrokosmos Mood Lamp"></a>
+                <h2>BTS - Mikrokosmos Mood Lamp</h2>
+                <p>Price: $100.00</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity-BTSlamp" name="BTS-Mikrokosmos Mood Lamp" min="1" value="1" max="5">
+                <button onclick="addToCart('BTS-Mikrokosmos Mood Lamp', 100, 'images/BTSlamp.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="ENHYPENdarkblood.html"><img src="images/ENHYPENdarkblood.jpg" alt="ENHYPEN-Dark Blood Album"></a>
+                <h2>ENHYPEN - Dark Blood Album</h2>
+                <p>Price: $25.00</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity-ENHYPENdarkblood" name="ENHYPEN-Dark Blood Album" min="1" value="1" max="5">
+                <button onclick="addToCart('ENHYPEN-Dark Blood Album', 25, 'images/ENHYPENdarkblood.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <a href="ENHYPENlightstick.html"><img src="images/ENHYPENlightstick.jpg" alt="ENHYPEN-Official Lightstick"></a>
+                <h2>ENHYPEN - Official Lightstick</h2>
+                <p>Price: $70.00</p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity-ENHYPENlightstick" name="ENHYPEN-Official Lightstick" min="1" value="1" max="5">
+                <button onclick="addToCart('ENHYPEN-Official Lightstick', 70, 'images/ENHYPENlightstick.jpg')">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 DayLight</p>
+        <ul>
+            <li><a href="review.html">Leave a Review</a></li>
+            <li><a href="terms.html">Terms and Conditions</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
